@@ -36,3 +36,32 @@ const functionExmp = function() {
 console.log(typeof objectExmp)
 console.log(typeof dataUndefined)
 console.log(typeof bigNumber)
+
+
+// ********************************* Stack and Heap ****************************
+
+// Memory are of 2 types : i). Stack : used by primitive data types
+//                             provide copy of data when called.
+// exmp:
+
+let myEmailId1 = "dev.amyth27@gmail.com"
+let myEmailId2 = myEmailId1
+myEmailId2 = "divyanshuamit2015@gmail.com"
+console.log(myEmailId1)
+console.log(myEmailId2)
+
+// Memory are of 2 types : i). Heap : used by non-primitive data types
+//                             provide referene when called.
+// exmp:
+
+let user1 = {
+    "name" : "Rajat",
+    "id" : 2
+}
+
+let user2 = user1;
+
+user2.name = "Shridhar"
+
+console.log(user1.name)
+console.log(user2.name)
