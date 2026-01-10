@@ -49,7 +49,45 @@ Deep Copies : A deep copy of an object is a copy whose properties do not share t
 // console.log(nArr2)
 // console.log(myArr)
 
- 
+const csk = ["dhoni", "raina", "jadeja"]
+const mi = ["rohit", "bumrah", "hardik"]
+
+// what if we push one array into another?
+// csk.push(mi)
+// console.log(csk); // add mi as another array inside already existing array
+
+// const india = csk.concat(mi)
+// console.log(india);
+
+// this can be done with array spreading as well
+
+// const india = [...csk, ...mi]
+// console.log(india);
+
+// converting subarrays into arrays
+
+// const confusing_sub_arrays = [1,2,3,[4,5,6],7,8,[9,10,11,[12,13]]]
+// const converted_confusing_sub_array = confusing_sub_arrays.flat(Infinity); // instead of infinity go real deapth
+// console.log(converted_confusing_sub_array);
+
+// check if given data is array
+console.log(Array.isArray("Divyanshu"));
+console.log(Array.from("Divyanshu"))
+
+console.log(Array.from({name : "Divyanshu"})) // we have to tell array will be created on 
+// the basis of either key or value which is an interesting case
+
+let score1 = 200
+let score2 = 400
+let score3 = 799
+console.log(Array.of(score1, score2, score3));
+
+
+
+
+
+
+
 
 
 
