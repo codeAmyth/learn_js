@@ -89,10 +89,24 @@ const obj2 = {
 // console.log(obj3);
 
 // spreading operator
-
 const obj3 = {...obj1, ...obj2}
-console.log(obj3);
+// console.log(obj3);
+// accessing multiple objects
 
+const obj = [
+    {
+        id : 1,
+        userName : "ankit"
+    },
+     {
+        id : 2,
+        userName : "ankita"
+    },
+]
+// console.log(obj[1].userName);
 
+// userful functions
+console.log(Object.keys(jsUser));
+console.log(Object.values(jsUser));
 
 
