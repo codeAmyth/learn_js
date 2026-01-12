@@ -47,4 +47,46 @@ function isFacultyLoggedIn(facultyName) {
 function sayHello(username = "sumit") {
     return `Hello ${username}`
 }
-console.log(sayHello())
+// console.log(sayHello())
+
+
+// multiple parameters at once use: use rest opeators (...)
+function getTotalCartPrice(...price) {
+    return price
+}
+//console.log(getTotalCartPrice(190,234,567,345,260)); // returns in array
+
+// Objects passing in functions
+
+const userObj = {
+    name : "Rajat",
+    age : 19,
+    sex : "male",
+    isDisabled : false
+}
+
+function getUserInfo(user) {
+    console.log(user);
+    return user.isDisabled
+}
+console.log(getUserInfo(userObj)); 
+
+// we can pass object directly as well
+
+console.log(getUserInfo({
+    name : "Namit",
+    age : 23,
+    sex : "male",
+    isDisabled : true
+}))
+
+// passing Arrays into the functions
+
+const myArr = [100, 200, 300, 500]
+function printArray(arr) {
+    return arr
+}
+console.log(myArr)
+
+console.log(["sachin", "dhoni", "kohli"])
+
