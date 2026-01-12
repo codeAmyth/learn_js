@@ -106,7 +106,22 @@ const obj = [
 // console.log(obj[1].userName);
 
 // userful functions
-console.log(Object.keys(jsUser));
-console.log(Object.values(jsUser));
+// console.log(Object.keys(jsUser));
+// console.log(Object.values(jsUser));
+
+// Object de-structuring : syntax for accessing object multiple times
+const course = {
+    id : 123,
+    courseName : "investment banking",
+    instructor : "Ronnie Screwala",
+    language : "english"
+}
+
+const {instructor} = course
+console.log(instructor);
+
+const {courseName} = course
+console.log(courseName);
+
 
 
