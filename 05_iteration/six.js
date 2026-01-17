@@ -11,9 +11,9 @@
 
 // filter : 
 
-const lang = [1,2,3,4,5,6,7,8,9,10]
-langItem =lang.filter( (item) => item >= 5 )
-console.log(langItem);
+ const lang = [1,2,3,4,5,6,7,8,9,10]
+// langItem =lang.filter( (item) => item >= 5 )
+// console.log(langItem);
 
 // Note : if added scope using {} then do not forget to explicity return value;
 
@@ -32,21 +32,29 @@ const books = [
   ];
 
   // get non fiction books
-let userBooks = books.filter((bk) => {
-   return bk.genre === 'Non-Fiction'
-    // return bk;
-})
+// let userBooks = books.filter((bk) => {
+//    return bk.genre === 'Non-Fiction'
+//     // return bk;
+// })
 
-console.log(userBooks);
+// console.log(userBooks);
   // get books publish after 2000
 
-  userBooks = books.filter( (bk) => bk.publish >= 2000)
-  console.log(userBooks);
+  // userBooks = books.filter( (bk) => bk.publish >= 2000)
+  // console.log(userBooks);
   
   // get books edition is more or 2010
 
-    userBooks = books.filter( (bk) => bk.edition >= 2010)
-  console.log(userBooks);
+  //   userBooks = books.filter( (bk) => bk.edition >= 2010)
+  // console.log(userBooks);
 
+// using for each
 
+const myLang = [];
+lang.forEach( (ln) => {
+  if (ln >= 5) {
+    myLang.push(ln)
+  }
+})
+console.log(myLang);
 
