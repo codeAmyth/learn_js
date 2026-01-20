@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}` // less optimised, full tree traversal
+        document.querySelector('.language').appendChild(li);
+    }
+
+    function addLangOptimised(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName)) // more efficient way and recommended
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage('java')
+    addLanguage('Python')
+    addLangOptimised('typescript')
+    addLangOptimised('Rust')
+
+    // Edit
+
+    const replaceLang = document.querySelector('li:nth-child(2)')
+    // console.log(newLi);
+    const newList = document.createElement('li')
+    newList.textContent = 'Mojo'
+    replaceLang.replaceWith(newList)
+
+    const replaceFirst = document.querySelector('li:nth-child(1)')
+    replaceFirst.outerHTML = '<li> TypeScript </li>'
+    
+    const replaceFourth = document.querySelector('li:nth-child(4)')
+    replaceFourth.outerHTML = '<li> Java </li>'
+    // remove
+
+    const removeLi = document.querySelector('li:nth-child(2)')
+    removeLi.remove()
+</script>
+</html>
