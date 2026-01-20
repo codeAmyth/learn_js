@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement('div')
+  
+    div.className = 'created-div'
+    div.id = Math.floor(Math.random() * 10 + 1)
+    div.setAttribute('title' , 'first-div')
+    div.style.backgroundColor = 'green'
+    div.style.padding = '20px'
+    div.style.borderRadius = '5px'
+    // div.innerText = "this is first div"
+    const createdDiv = document.createTextNode("this is first div")
+    div.appendChild(createdDiv)
+      console.log(div);
+
+      document.body.appendChild(div)
+      
+</script>
+</html>
