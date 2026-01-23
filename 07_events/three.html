@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Diyanshu Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setInterval(function () {
+    //     console.log("hello")
+    // }, 1000)
+
+    const changeHeading = function() {
+        document.querySelector('H1').innerHTML = 'Divyanshu React';   
+    }
+    //  const stopThis = setInterval(sayHi, 1000)
+    let stopThis;
+     //clearInterval(stopThis)
+
+     document.querySelector('#start').addEventListener('click', function() {
+        stopThis = setInterval(changeHeading, 100)
+     })
+
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearInterval(stopThis)
+     })
+</script>
+
+</html>
